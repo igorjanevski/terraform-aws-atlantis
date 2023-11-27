@@ -221,8 +221,9 @@ module "ecs_cluster" {
 }
 
 module "ecs_service" {
-  source  = "terraform-aws-modules/ecs/aws//modules/service"
-  version = "5.6.0"
+  # source  = "terraform-aws-modules/ecs/aws//modules/service"
+  # version = "5.6.0"
+  source  = "git::https://github.com/igorjanevski/terraform-aws-ecs.git?ref=master"
 
   create = var.create
 
